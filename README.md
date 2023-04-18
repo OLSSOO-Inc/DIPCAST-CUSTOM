@@ -57,5 +57,11 @@ How to develop your own business services on DIPCAST!
 >       1. priority : ```1```
 > <img src="resources/images/dcce-custom-context.png">
 
-## 스크립트 템플릿
+## 스크립트 템플릿 (계획)
+
+> * 변수
+> * 080
+> * DTMF 입력
+> * TTS
+> * 샘플 IVR
 
