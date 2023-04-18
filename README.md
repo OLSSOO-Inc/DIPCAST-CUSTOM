@@ -59,7 +59,7 @@ How to develop your own business services on DIPCAST!
 
 ## 스크립트 템플릿 (ing...)
 
-> * [Dynamic 기본 변수](resources/templates/extensions__61-dynamic-variable.conf)
+> * [Dynamic 기본 변수](resources/templates/extensions__61-2-dynamic-varible.conf)
 > * 080
 > * DTMF 입력
 > * TTS
