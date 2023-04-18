@@ -40,4 +40,10 @@ How to develop your own business services on DIPCAST!
 > 1. 좌측 메뉴에 ```어플리케이션```을 클릭합니다.
 > 1. 좌측 메뉴에 ```커스텀 컨텍스트```를 클릭합니다.
 > 1. ```DCCE```에서 작성한 스크립트 내용을 확인하여 각 항목에 맞게 입력합니다.
+>       1. context : ```acastar-incoming```
+>       1. exten : ```IN```
+>       1. priority : ```1```
 > <img src="resources/images/dcce-custom-context.png">
+
+## 스크립트 템플릿
+
