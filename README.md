@@ -30,7 +30,7 @@ How to develop your own business services on DIPCAST!
 >       1. ```C``` 파일을 닫습니다.
 > <img src="resources/images/dcce-menu.png">
 
-### DCCE 스크립트 파일 수정
+### DCCE 스크립트 파일 수정 (전화수신시 DID 번호별로 각기 다른 링그룹으로 수신통화를 분기)
 > 1. 파일 목록에서 수정할 스크립트 파일을 클릭합니다.
 > 1. 스크립트를 수정하고, 저장합니다.
 > <img src="resources/images/dcce-dialplan.png">
