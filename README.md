@@ -19,5 +19,6 @@ How to develop your own business services on DIPCAST!
 > 1. 웹 브라우져를 열고, 주소창에 http://```IP주소```/dcce를 입력합니다. 
 > 1. 비밀번호를 입력하고 로그인 번호를 입력합니다.
 
+> <img src="resources/images/dcce-menu.png"><br>
 > ### 사용방법
 
