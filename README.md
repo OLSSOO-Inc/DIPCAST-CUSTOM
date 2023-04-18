@@ -33,4 +33,4 @@ How to develop your own business services on DIPCAST!
 ### 사용 방법
 > 1. 블라
 > 2. 블라
-> <img src="resources/images/dcce-menu.png">
+> <img src="resources/images/dcce-dialplan.png">
