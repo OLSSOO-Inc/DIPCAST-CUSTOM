@@ -12,3 +12,4 @@ How to develop your own business services on DIPCAST!
 ***
 
 ![DIPCAST](resources/images/login-bg.png){: width="50%" height="50%"}
+<img src="resources/images/login-bg.png" width="772" height="499"/>
