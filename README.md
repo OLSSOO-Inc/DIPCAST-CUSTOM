@@ -20,5 +20,15 @@ How to develop your own business services on DIPCAST!
 > 1. 비밀번호를 입력하고 로그인 번호를 입력합니다.
 
 > <img src="resources/images/dcce-menu.png"><br>
-> ### 사용방법
-
+> ### 기본 메뉴 설명
+> 1. 다크모드로 전환합니다.
+> 1. 설정(config) 리로드 명령을 출력합니다.
+> 1. 비밀번호 변경합니다.
+> 1. 프로그램을 종료합니다.
+> 1. 수정할 설정파일 목록을 출력합니다.
+> 1. 파일을 관리합니다.
+>       1. ```S``` 파일을 저장합니다.
+>       1. ```O``` 파일을 다시불러옵니다.
+>       1. ```C``` 파일을 닫습니다.
+> ### 사용 방법
+> <img src="resources/images/dcce-menu.png"><br>
