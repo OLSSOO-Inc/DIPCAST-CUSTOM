@@ -23,14 +23,21 @@ How to develop your own business services on DIPCAST!
 > 1. 설정(config) 리로드 명령을 출력합니다.
 > 1. 비밀번호 변경합니다.
 > 1. 프로그램을 종료합니다.
-> 1. 수정할 설정파일 목록을 출력합니다.
+> 1. 수정할 스크립트 파일 목록을 출력합니다.
 > 1. 파일을 관리합니다.
 >       1. ```S``` 파일을 저장합니다.
 >       1. ```O``` 파일을 다시불러옵니다.
 >       1. ```C``` 파일을 닫습니다.
 > <img src="resources/images/dcce-menu.png">
 
-### 사용 방법
-> 1. 블라
-> 2. 블라
+### DCCE 스크립트 파일 수정
+> 1. 파일 목록에서 수정할 스크립트 파일을 클릭합니다.
+> 1. 스크립트를 수정하고, 저장합니다.
 > <img src="resources/images/dcce-dialplan.png">
+>
+### DIPCAST VOIP > 어플리케이션 > 커스텀 컨텍스트에 적용
+> 1. 좌측 메뉴에 ```VOIP```를 클릭합니다. 
+> 1. 좌측 메뉴에 ```어플리케이션```을 클릭합니다.
+> 1. 좌측 메뉴에 ```커스텀 컨텍스트```를 클릭합니다.
+> 1. ```DCCE```에서 작성한 스크립트 내용을 확인하여 각 항목에 맞게 입력합니다.
+> <img src="resources/images/dcce-custom-context.png">
