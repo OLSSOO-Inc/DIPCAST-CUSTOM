@@ -57,7 +57,7 @@ How to develop your own business services on DIPCAST!
 >       1. priority : ```1```
 > <img src="resources/images/dcce-custom-context.png">
 
-## 스크립트 템플릿 (계획)
+## 스크립트 템플릿 (ing...)
 
 > * [Dynamic 기본 변수](resources/templates/extensions__61-dynamic-variable.conf)
 > * 080
