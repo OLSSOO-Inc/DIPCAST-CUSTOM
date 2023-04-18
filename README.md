@@ -16,7 +16,8 @@ How to develop your own business services on DIPCAST!
 > ### 접속방법
 > 1. 웹 브라우져를 열고, 주소창에 http://```IP주소```/dcce를 입력합니다. 
 > 1. 비밀번호를 입력하고 로그인 번호를 입력합니다.
-> <img src="resources/images/dcce-login.png"><br>
+> <img src="resources/images/dcce-login.png">
+
 > ### 기본 메뉴 설명
 > 1. 다크모드로 전환합니다.
 > 1. 설정(config) 리로드 명령을 출력합니다.
@@ -27,9 +28,9 @@ How to develop your own business services on DIPCAST!
 >       1. ```S``` 파일을 저장합니다.
 >       1. ```O``` 파일을 다시불러옵니다.
 >       1. ```C``` 파일을 닫습니다.
-> <img src="resources/images/dcce-menu.png"><br>
->
+> <img src="resources/images/dcce-menu.png">
+
 > ### 사용 방법
 > 1. 블라
 > 2. 블라
-> <img src="resources/images/dcce-menu.png"><br>
+> <img src="resources/images/dcce-menu.png">
