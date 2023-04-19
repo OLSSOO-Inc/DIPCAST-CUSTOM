@@ -15,6 +15,4 @@ Variable 사용 방법
 >       1. 우선순위 입력 : ```1```
 >       1. 다음 라우팅 선택 : ```모듈선택``` >  ```상세선택``` 다음에 실행할 수신모듈과 목록을 선택합니다. 
 > <img src="resources/images/dcce-custom-context.png">
-
-
-> * [Dynamic 기본 변수](resources/templates/extensions__61-1-dynamic-variable.conf)
+> * [스크립트](resources/templates/extensions__61-1-dynamic-variable.conf)
