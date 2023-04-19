@@ -39,7 +39,7 @@ How to develop your own business services on DIPCAST!
 파일의 이름은 반드시 ```extensions__6``` 으로 시작되어야 합니다.
 >
 > * [Dynamic 기본 변수](61-1-VARIABLE.md)
-> * 080 수신거부
+> * [080 문자메세지 수신 거부 등록시스템](62-1-080DND.md)
 > * DTMF 입력
 > * TTS
 > * 샘플 IVR
