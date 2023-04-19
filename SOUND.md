@@ -39,3 +39,5 @@ CUSTOM 사운드 파일
 |080-dnd-timeout | 5초안에 입력해 주세요|
 |080-dnd-play-cidnumber-pre|고객님의 번호는|
 |080-dnd-input-number-short|등록을 원하는 번호를 입력하시고 우물정자를 누르세요|
+|080-dnd-wrong-number|입력하신 번호가 고객정보와 일치 하지 않습니다. 다시 입력해 주세요|
+|080-dnd-complete|수신거부 등록이 정상적으로 처리되었습니다|
