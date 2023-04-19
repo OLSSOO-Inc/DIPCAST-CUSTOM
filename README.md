@@ -57,6 +57,9 @@ How to develop your own business services on DIPCAST!
 >       1. priority : ```1```
 > <img src="resources/images/dcce-custom-context.png">
 
+## CUSTOM 사운드 파일 재생 및 목록
+[CUSTOM 사운드](SOUND.md)를 합니다.
+
 ## 스크립트 템플릿 (ing...)
 목록을 클릭후, 스크립트를 이름과 내용을 복사하여 DCCE에 적용하고, [dialplan reload](CONFIG-RELOAD.md)를 합니다.
 > * [Dynamic 기본 변수](resources/templates/extensions__61-2-dynamic-varible.conf) 
