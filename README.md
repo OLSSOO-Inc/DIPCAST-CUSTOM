@@ -58,10 +58,11 @@ How to develop your own business services on DIPCAST!
 > <img src="resources/images/dcce-custom-context.png">
 
 ## 스크립트 템플릿 (ing...)
-목록을 클릭후, 스크립트를 이름과 내용을 복사하여 DCCE에 적용하고, dialplan reload를 합니다. 
-> * [Dynamic 기본 변수](resources/templates/extensions__61-2-dynamic-varible.conf)
+목록을 클릭후, 스크립트를 이름과 내용을 복사하여 DCCE에 적용하고, [dialplan reload](CONFIG-RELOAD.md)를 합니다.
+> * [Dynamic 기본 변수](resources/templates/extensions__61-2-dynamic-varible.conf) 
 > * 080 수신거부
 > * DTMF 입력
 > * TTS
 > * 샘플 IVR
+> * 음성통화에 네이버 TTS 적용하기
 
