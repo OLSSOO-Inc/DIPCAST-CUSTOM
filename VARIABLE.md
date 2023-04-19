@@ -16,4 +16,4 @@ Variable 사용 방법
 >       1. 다음 라우팅 선택 : ```모듈선택``` >  ```상세선택``` 다음에 실행할 수신모듈과 목록을 선택합니다. 
 > <img src="resources/images/dcce-custom-context.png"> 
 >
-> * [스크립트](resources/templates/extensions__61-1-dynamic-variable.conf)
+> * [변수 사용 스크립트](resources/templates/extensions__61-1-dynamic-variable.conf)
