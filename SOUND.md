@@ -37,3 +37,5 @@ CUSTOM 사운드 파일
 |080-dnd-confrim-1-2|등록 번호가 맞으면 일번, 아니면 이번으로 눌러주세요 |
 |080-dnd-incorrect | 입력번호가 다릅니다|
 |080-dnd-timeout | 5초안에 입력해 주세요|
+|080-dnd-play-cidnumber-pre|고객님의 번호는|
+|080-dnd-input-number-short|등록을 원하는 번호를 입력하시고 우물정자를 누르세요|
