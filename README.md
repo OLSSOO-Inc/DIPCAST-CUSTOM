@@ -64,7 +64,7 @@ How to develop your own business services on DIPCAST!
 목록을 클릭후, 스크립트를 이름과 내용을 복사하여 DCCE에 적용하고, [다이얼플랜 리로드](CONFIG-RELOAD.md)를 합니다.<br>
 파일의 이름은 반드시 ```extensions__6``` 으로 시작되어야 합니다.
 >
-> * [Dynamic 기본 변수](VARIABLE.md)
+> * [Dynamic 기본 변수](61-1-VARIABLE.md)
 > * 080 수신거부
 > * DTMF 입력
 > * TTS
