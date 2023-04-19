@@ -17,3 +17,4 @@ CUSTOM 사운드 파일
 |error | 에러|
 |time | 시간|
 |welcome | 환영합니다|
+|goodbye| 이용해 주셔서 감사합니다|
