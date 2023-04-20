@@ -42,3 +42,4 @@ CUSTOM 사운드 파일
 |080-dnd-wrong-number|입력하신 번호가 고객정보와 일치 하지 않습니다. 다시 입력해 주세요|
 |080-dnd-complete|수신거부 등록이 정상적으로 처리되었습니다|
 |080-dnd-end-retry|이용 방법을 확인하시고 다시 전화 주세요|
+|080-dnd-wrong-mobile-number|등록 가능한 번호가 아닙니다. 다시 입력해 주세요 |
