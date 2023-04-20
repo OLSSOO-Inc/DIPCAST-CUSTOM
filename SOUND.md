@@ -44,3 +44,4 @@ CUSTOM 사운드 파일
 |080-dnd-end-retry|이용 방법을 확인하시고 다시 전화 주세요|
 |080-dnd-wrong-mobile-number|등록 가능한 번호가 아닙니다. 다시 입력해 주세요 |
 |080-dnd-play-inputnumber-pre | 입력하신  번호는|
+|080-dnd-intro-brand|당신의 더 나은 커뮤니티 여정을 함께 하는 주식회사 얼쑤팩토리|
