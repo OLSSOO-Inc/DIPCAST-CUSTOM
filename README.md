@@ -34,14 +34,10 @@ How to develop your own business services on DIPCAST!
 ## CUSTOM 사운드 파일 재생 및 목록
 [CUSTOM 사운드](SOUND.md) 사용 하기
 
-## 스크립트 템플릿 (ing...)
-목록을 클릭후, 스크립트를 이름과 내용을 복사하여 DCCE에 적용하고, [다이얼플랜 리로드](CONFIG-RELOAD.md)를 합니다.<br>
-파일의 이름은 반드시 ```extensions__6``` 으로 시작되어야 합니다.
+## 스크립트 템플릿 
+
 >
 > * [Dynamic 기본 변수](61-1-VARIABLE.md)
 > * [080 문자메세지 수신 거부 등록시스템](62-1-080DND.md)
-> * DTMF 입력
-> * TTS
-> * 샘플 IVR
-> * 음성통화에 네이버 TTS 적용하기
+
 
