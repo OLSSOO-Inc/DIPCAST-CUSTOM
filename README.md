@@ -1,10 +1,17 @@
-# DIPCAST - CUSTOM
+# DIPCAST - CUSTOM 
 
-DIPCAST에서 자기만의 비지니스 서비스 만드는 방법     
-How to develop your own business services on DIPCAST!
+DIPCAST에서 자기만의 커스텀 스크립트 적용하세요
+How to develop your own custom scripts on DIPCAST!
 ***
 
-## DIPCAST 구매
+## 확장 변수 제공
+> * [Dynamic 확장 변수](61-1-VARIABLE.md)
+
+## 080 문자메세지 수신 거부 제공
+> * [080 문자메세지 수신 거부 등록시스템](62-1-080DND.md)
+
+
+## DIPCAST 구매후 시작하세요 !
 
 > <img src="resources/images/login-bg.png" width="386" height="250"/><br>     
 > 홈페이지 : https://www.makecall.io     
@@ -33,11 +40,3 @@ How to develop your own business services on DIPCAST!
 > * [DCCE 사용 예제](EXAMPLE.md)
 ## CUSTOM 사운드 파일 재생 및 목록
 [CUSTOM 사운드](SOUND.md) 사용 하기
-
-## 스크립트 템플릿 
-
->
-> * [Dynamic 기본 변수](61-1-VARIABLE.md)
-> * [080 문자메세지 수신 거부 등록시스템](62-1-080DND.md)
-
-
