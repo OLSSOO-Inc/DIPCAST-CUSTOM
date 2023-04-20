@@ -13,7 +13,7 @@ How to develop your own custom scripts on DIPCAST!
 
 ## DIPCAST 구매후 시작하세요 !
 
-> <img src="resources/images/login-bg.png" width="386" height="250"/><br>     
+> <img src="resources/images/login-bg.png" width="309" height="200"/><br>     
 > 홈페이지 : https://www.makecall.io     
 > 구매문의 : 1668-2471     
 > 구매링크 : [네이버 스마트 스토어](https://smartstore.naver.com/olssoo/)     
@@ -32,6 +32,7 @@ How to develop your own custom scripts on DIPCAST!
 > 1. 프로그램을 종료합니다.
 > 1. 수정할 스크립트 파일 목록을 출력합니다.
 > 1. 파일을 관리합니다.
+>       1. ```N``` 새파일을 생성합니다.
 >       1. ```S``` 파일을 저장합니다.
 >       1. ```O``` 파일을 다시불러옵니다.
 >       1. ```C``` 파일을 닫습니다.
