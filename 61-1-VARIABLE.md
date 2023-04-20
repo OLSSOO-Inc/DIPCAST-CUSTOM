@@ -27,6 +27,4 @@ Variable 사용 방법
 >       1. ${DIPCAST-CHANNEL-DIDNUMBER} : DID 번호
 >       1. ${DIPCAST-CHANNEL-SERVICENUMBER} : 15XX, 16XX, 18XX 등 대표번호, 080 수신자 부담 번호 등 (한국 케이블 텔레콤:KCT 가입자만 가능)
 >       1. ${DIPCAST-CHANNEL-LINKEDID} : 모든 채널 연결ID
->
->
-> * [변수 사용 스크립트](resources/templates/extensions__61-1-dynamic-variable.conf)
+
