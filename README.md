@@ -36,6 +36,8 @@ How to develop your own custom scripts on DIPCAST!
 >       1. ```S``` 파일을 저장합니다.
 >       1. ```O``` 파일을 다시불러옵니다.
 >       1. ```C``` 파일을 닫습니다.
+>
+> * 파일 생성시 파일 이름이 중복되지 않게 주의해서 생성합니다. (추천 이름 : extensions__69-1-my-dialplan.conf)
 > <img src="resources/images/dcce-menu.png">
 
 > * [DCCE 사용 예제](EXAMPLE.md)
