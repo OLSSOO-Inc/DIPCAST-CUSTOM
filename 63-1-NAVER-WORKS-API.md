@@ -6,12 +6,14 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 
 <center><img src="resources/images/service-map.jpeg"></center>
 <br>
-<div style="text-align: right"><span style="color:#00498c"><b>DynamicIPCAST(다이나믹 아이피캐스트)</b></span>네이버 웍스 API 연동</div>
+<div style="text-align: right"><span style="color:#00498c"><b>DynamicIPCAST(다이나믹 아이피캐스트)</b></span>와 네이버 웍스 API 연동</div>
 
 <div style="text-align: right">당신의 더 나은 커뮤니케이션 여정을 함께합니다.</div>
 <div style="text-align: right"><b>주식회사 얼쑤팩토리</b></div>
 <div style="text-align: right">대표번호 1668-2471</div>
 
+<br>
+<br>
 > # 문서 정보
 
 | 항목 | 내용 |
