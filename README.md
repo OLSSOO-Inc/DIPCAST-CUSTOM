@@ -4,12 +4,14 @@ DIPCAST에서 자기만의 커스텀 스크립트 적용하세요
 How to develop your own custom scripts on DIPCAST!
 ***
 
-## 확장 변수 제공
+## 01.확장 변수 제공
 > * [Dynamic 확장 변수](61-1-VARIABLE.md)
 
-## 080 문자메세지 수신 거부 제공
+## 02.080 문자메세지 수신 거부 제공
 > * [080 문자메세지 수신 거부 등록시스템](62-1-080DND.md)
 
+## 03.Naver Works API 연동 (63-1-NAVER-WORKS-API.md)
+> * [Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기](63-1-NAVER-WORKS-API.md)
 
 ## DIPCAST 구매후 시작하세요 !
 
