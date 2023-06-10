@@ -85,8 +85,9 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 
 |항 목|DIPCAST-50 |DIPCAST-100|비 고|
 |:---:|:---:|:---:|:---:|
-| 단말운용 | 50 |100 | 멀티 등록 사용시 개수에 포함됨 |
-| 동시통화 | 25 |50 | 통화 녹음 사용시 기준 (녹취 및 부가 앱 사용 포함) |
+| 단말운용 | 50 | 100 | 멀티 등록 사용시 개수에 포함됨 |
+| 동시통화 | 25 | 50 | 통화 녹음 사용시 기준 (녹취 및 부가 앱 사용 포함) |
+| 최대단말 | 100 | 300 | 멀티 등록 사용시 개수에 포함됨 |
 
 <br>
 
@@ -102,7 +103,7 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 >
 > * (1) 사용자 이름을 입력합니다. (기본:<dipcast@makecall.io>)
 > * (2) 비밀번호을 입력합니다. (기본:ihavenopassword@)
-> ![데스크탑 로그인](resources/img/dipcast.desktop.login.png)
+> ![데스크탑 로그인](resources/images/dipcast.desktop.login.png)
 > <br>
 > <br>
 
