@@ -30,24 +30,49 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 나. 제품 설치 환경......3     
 다. 제품 개요 및 설명.....4     
 라. 웹 기본......4     
-마. 웹 메뉴......8     
->     
-> 1. VOIP......8     
->  
-> > 1.1 단말번호......8     
-> > 1.2 어플리케이션......11     
-> > 1.3 콜센터......14     
-> > 1.4 외부연동......16     
-> > 1.5 수신통화......21     
-> > 1.6 도구......25     
-> > 1.7 위치 알림......29     
-> > 1.8 단말 프로비져닝......30     
-
+마. 네이버 웍스......8     
 바. 부록......55      
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # 가. 서비스 안내
->
+<br>      
+
 > ### 1. A/S 지원
 
 * 하드웨어 보증은 제품 구매 후 1년 이내 무상 지원되며, 1년 경과 시에는 유상 지원됩니다.
@@ -58,13 +83,18 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 * ```운영 시간``` 10:00 ~ 18:00(월~금) / 법정 공휴일 및 주말 휴무
 * ```홈페이지``` <https://www.makecall.io>
 
+<br>       
+
 # 나. 제품 설치 환경
->
+<br>      
+
 > ### 1. 다양한 네트워크 환경을 지원
 
 * ```인터넷 전화 서비스를 사용```하려면, ```인터넷에 연결```되어 있어야 합니다.
-  * 일부 보안장비나 공유기(```VoIP```, ```SIP``` 지원여부에 따라)는 <u>음성통화에 문제가 발생</u>할 수 있습니다.
+* 일부 보안장비나 공유기(```VoIP```, ```SIP``` 지원여부에 따라)는 <u>음성통화에 문제가 발생</u>할 수 있습니다.
 * ```독립 네트워크나 패쇄망```에 구축이 가능합니다.
+* ```방화벽, VPN```등 보안 장비에 하단에 구축이 가능합니다.
+* DIPCAST-50 제품은 팬이 없는 구성으로 ```스마트 팜```등과 같은 ```IoT```환경에 최적화 되어 있습니다.
 
 > ### 2. DynamicIPCAST 일체형 Spec
 
@@ -107,3 +137,62 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 > <br>
 > <br>
 
+# 마. 네이버 웍스 (<https://naver.worksmobile.com/>)
+>
+> ### 1. 네이버웍스란?
+> 네이버웍스는 네이버/LINE 서비스와 유사한 화면으로
+> 누구나 쉽게 사용할 수 있는 업무용 메신저입니다.
+> 메시지로 직장 동료들과 소통하며, 네이버웍스만의 그룹 기능으로
+> 유기적인 협업을 가능하게 합니다.
+> 타사의 네이버웍스 사용자는 물론 LINE 사용자와도 대화를 나눌 수 있어
+> 고객 또는 거래처와의 소통 채널을 일원화합니다.
+>
+> * ```공인 홈 링크``` <https://naver.worksmobile.com/feature/overview/>
+
+> ### 2. 네이버웍스 가입 안내
+>
+> 네이버웍스는 회사나 단체에서 가입하여 사용하는 서비스입니다.
+> 개인이 각각 가입하는 것이 아닌 회사나 단체당 하나의 네이버웍스를 먼저 가입한 후,
+> 가입한 사람(관리자)이 함께 일하는 직원을 초대하거나 추가해서 구성원을 늘립니다.
+> 아래의 가입 안내 링크에 따라, 가입하세요.
+>
+> ![가입 안내](resources/images/naver-works-beginner.png)
+>
+> * ```가입 안내 링크``` <https://naver.worksmobile.com/ebook/video-for-beginner/>
+
+> ### 3. NAVER WORKS API 2.0
+>
+> NAVER WORKS API는 NAVER WORKS와의 연동 기능을 제공합니다.
+> 개발자는 NAVER WORKS API를 사용하여 Bot 사용, 조직 및 그룹 관리, 파일 업로드/다운로드 등 NAVER WORKS에서 제공하는 다양한 기능과 리소스를 활용하는 앱을 개발할 수 있습니다.
+> NAVER WORKS의 봇, 게시판, 캘린더, 주소록, 메일, 드라이브 등 다양한 기능을 일관적인 인터페이스의 REST API로 활용해보세요.
+>
+> * ```공인 문서 링크``` <https://developers.worksmobile.com/kr/features/api>
+> <br>
+> <br>
+> <br>       
+
+> ### 4. NAVER WORKS API 2.0 - Bot
+>
+> Bot API로 Bot에서 메시지를 보내거나, 메뉴를 설정하고, Bot을 관리할 수 있다.
+> Bot API를 호출하려면 구성원 계정 또는 서비스 계정으로 인증하여 얻은 Access Token이 필요하다. API scope는 bot, bot.read이다.
+>
+> * ```공인 문서 링크``` <https://developers.worksmobile.com/kr/docs/bot-api>
+>
+> * Bot의 작동 방식
+> Bot을 사용하면 NAVER WORKS 사용자와 직접 상호 작용할 수 있다. 고객사의 메시지 수신 서버에서 Bot API를 사용해 사용자에게 메시지를 보낼 수 있으며, 사용자가 전송한 메시지에 따라 자동으로 응답할 수 있다.
+> ![봇의 작동방식](resources/images/bot_arch.png)
+> NAVER WORKS는 Bot의 인터페이스 제공하며 이를 통해 고객사의 메시지 수신 서버와 데이터를 주고 받을수 있다.
+
+> ### 5. NAVER WORKS Developer Console 설정
+>
+> NAVER WORKS Developer Console (<https://dev.worksmobile.com/kr/console>)에 로그인 후 API 2.0 탭에서 앱을 추가 하고, Bot 탭에서는 Bot을 등록합니다.
+>
+> * Developer Console 화면
+>
+> ![앱](resources/images/naver-works-console.png)
+>
+> * 앱 설정 화면
+> ![앱](resources/images/naver-works-app.png)
+>
+> * 봇 설정 화면
+> ![봇](resources/images/naver-works-bot.png)
