@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>63-1-NAVER-WORKS-API.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="dipcast---custom">DIPCAST - CUSTOM</h1>
+<p>Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기</p>
+<hr>
+<p><img src="resources/images/dipcastXnaverworksapi.png" /><br></p>
+<center><img src="resources/images/service-map.jpeg"></center>
+<br>
+<div style="text-align: right"><span style="color:#00498c"><b>DynamicIPCAST(다이나믹 아이피캐스트)</b></span>와 네이버 웍스 API 연동</div>
+<div style="text-align: right">당신의 더 나은 커뮤니케이션 여정을 함께합니다.</div>
+<div style="text-align: right"><b>주식회사 얼쑤팩토리</b></div>
+<div style="text-align: right">대표번호 1668-2471</div>
+<br>
+<br>
+<blockquote>
+<h1 id="%EB%AC%B8%EC%84%9C-%EC%A0%95%EB%B3%B4">문서 정보</h1>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">항목</th>
+<th style="text-align:center">내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">버전</td>
+<td style="text-align:center">1.0</td>
+</tr>
+<tr>
+<td style="text-align:center">상태</td>
+<td style="text-align:center">완료</td>
+</tr>
+<tr>
+<td style="text-align:center">작성자</td>
+<td style="text-align:center">주식회사 얼쑤팩토리</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h1 id="%EB%AA%A9%EC%B0%A8">목차</h1>
+</blockquote>
+<p>가. 서비스 안내......3<br>
+나. 제품 설치 환경......3<br>
+다. 제품 개요 및 설명.....4<br>
+라. 웹 기본......4<br>
+마. 네이버 웍스......8<br>
+바. 부록......55</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 id="%EA%B0%80-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%95%88%EB%82%B4">가. 서비스 안내</h1>
+<br>      
+<blockquote>
+<h3 id="1-as-%EC%A7%80%EC%9B%90">1. A/S 지원</h3>
+</blockquote>
+<ul>
+<li>하드웨어 보증은 제품 구매 후 1년 이내 무상 지원되며, 1년 경과 시에는 유상 지원됩니다.</li>
+</ul>
+<blockquote>
+<h3 id="2-%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0-%EC%82%AC%EC%9A%A9-%EB%AC%B8%EC%9D%98-%EB%B0%8F-%EA%B3%A0%EC%9E%A5-%EC%A0%91%EC%88%98">2. 고객센터 (<strong>사용 문의 및 고장 접수</strong>)</h3>
+</blockquote>
+<ul>
+<li><code>전화번호</code> 1668 - 2471</li>
+<li><code>운영 시간</code> 10:00 ~ 18:00(월~금) / 법정 공휴일 및 주말 휴무</li>
+<li><code>홈페이지</code> <a href="https://www.makecall.io">https://www.makecall.io</a></li>
+</ul>
+<br>       
+<h1 id="%EB%82%98-%EC%A0%9C%ED%92%88-%EC%84%A4%EC%B9%98-%ED%99%98%EA%B2%BD">나. 제품 설치 환경</h1>
+<br>      
+<blockquote>
+<h3 id="1-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%ED%99%98%EA%B2%BD%EC%9D%84-%EC%A7%80%EC%9B%90">1. 다양한 네트워크 환경을 지원</h3>
+</blockquote>
+<ul>
+<li><code>인터넷 전화 서비스를 사용</code>하려면, <code>인터넷에 연결</code>되어 있어야 합니다.</li>
+<li>일부 보안장비나 공유기(<code>VoIP</code>, <code>SIP</code> 지원여부에 따라)는 <u>음성통화에 문제가 발생</u>할 수 있습니다.</li>
+<li><code>독립 네트워크나 패쇄망</code>에 구축이 가능합니다.</li>
+<li><code>방화벽, VPN</code>등 보안 장비에 하단에 구축이 가능합니다.</li>
+<li>DIPCAST-50 제품은 팬이 없는 구성으로 <code>스마트 팜</code>등과 같은 <code>IoT</code>환경에 최적화 되어 있습니다.</li>
+</ul>
+<blockquote>
+<h3 id="2-dynamicipcast-%EC%9D%BC%EC%B2%B4%ED%98%95-spec">2. DynamicIPCAST 일체형 Spec</h3>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">항 목</th>
+<th style="text-align:center">DIPCAST-50</th>
+<th style="text-align:center">DIPCAST-100</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CPU</td>
+<td style="text-align:center">4 Core 2.0GHz</td>
+<td style="text-align:center">4 Core 2.0GHz</td>
+</tr>
+<tr>
+<td style="text-align:center">RAM</td>
+<td style="text-align:center">8GB</td>
+<td style="text-align:center">8GB</td>
+</tr>
+<tr>
+<td style="text-align:center">DISK(운영)</td>
+<td style="text-align:center">512GB (SSD)</td>
+<td style="text-align:center">512GB (SSD)</td>
+</tr>
+<tr>
+<td style="text-align:center">네트워크</td>
+<td style="text-align:center">1000M/100M (4포트)</td>
+<td style="text-align:center">1000M/100M (4포트)</td>
+</tr>
+<tr>
+<td style="text-align:center">USB</td>
+<td style="text-align:center">버젼 2 X 2, 버젼 3 X 1 (4포트)</td>
+<td style="text-align:center">버젼 2 (2포트)</td>
+</tr>
+<tr>
+<td style="text-align:center">제품크기</td>
+<td style="text-align:center">128mm <em>128mm</em> 41mm(L <em>W</em> H)</td>
+<td style="text-align:center">430mm <em>250.20mm</em> 46mm(L <em>W</em> H)</td>
+</tr>
+<tr>
+<td style="text-align:center">전원</td>
+<td style="text-align:center">12V/5A (DC IN Jack,외부 어댑터)</td>
+<td style="text-align:center">AC 110V ~ 220V, AC to DC, 60W (파워 내장)</td>
+</tr>
+<tr>
+<td style="text-align:center">동작온도</td>
+<td style="text-align:center">-10℃ ~ 60℃</td>
+<td style="text-align:center">-10℃ ~ 60℃</td>
+</tr>
+<tr>
+<td style="text-align:center">동작습도</td>
+<td style="text-align:center">5%-95%, no condensing</td>
+<td style="text-align:center">5%-95%, no condensing</td>
+</tr>
+<tr>
+<td style="text-align:center">동작진동</td>
+<td style="text-align:center">0.5g rms/5-500HZ/random/operating</td>
+<td style="text-align:center">0.5g rms/5-500HZ/random/operating</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="3-dynamicipcast-voip-%EC%84%B1%EB%8A%A5">3. DynamicIPCAST VoIP 성능</h3>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">항 목</th>
+<th style="text-align:center">DIPCAST-50</th>
+<th style="text-align:center">DIPCAST-100</th>
+<th style="text-align:center">비 고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">단말운용</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">멀티 등록 사용시 개수에 포함됨</td>
+</tr>
+<tr>
+<td style="text-align:center">동시통화</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">통화 녹음 사용시 기준 (녹취 및 부가 앱 사용 포함)</td>
+</tr>
+<tr>
+<td style="text-align:center">최대단말</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">300</td>
+<td style="text-align:center">멀티 등록 사용시 개수에 포함됨</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h1 id="%EB%8B%A4-%EC%A0%9C%ED%92%88-%EA%B0%9C%EC%9A%94-%EB%B0%8F-%EC%84%A4%EB%AA%85">다. 제품 개요 및 설명</h1>
+<blockquote>
+<p><code>DynamicIPCAST</code> (다이나믹 캐스트) 제품은 <code>SIP프로토콜을 사용하는 장비</code>나 <code>인터넷전화 사업자 장비</code>와 연동을 제공하여 기존 <code>음성통화 서비스의 제공 범위를 확장(IVR, ARS, ACS, CTI, CRM, STT, TTS)</code>시키거나 <code>DynamicIPCAST</code>가 자체 보유한 <code>음성회의</code>, <code>음성방송</code>, <code>음성녹음</code>, <code>자동응답</code>등의 기능을 연계하여 사용할 수 있는 제품입니다.</p>
+</blockquote>
+<h1 id="%EB%9D%BC-%EC%9B%B9-%EA%B8%B0%EB%B3%B8">라. 웹 기본</h1>
+<blockquote>
+<h3 id="1-%EB%A1%9C%EA%B7%B8%EC%9D%B8">1. 로그인</h3>
+<h3 id="dynamicipcast%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%B4-%EC%84%9C%EB%B2%84%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-ip%EB%A5%BC-%EC%9D%B8%ED%84%B0%EB%84%B7-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%B8%EC%97%90-%EC%9E%85%EB%A0%A5%ED%95%98%EA%B3%A0-%EC%95%84%EB%9E%98%EC%9D%98-%EC%A0%91%EC%86%8D%EC%A0%95%EB%B3%B4%EB%A5%BC-%EC%9E%85%EB%A0%A5%ED%95%98%EC%97%AC-%EA%B4%80%EB%A6%AC%EC%9E%90%EC%9B%B9%EC%97%90-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%A9%EB%8B%88%EB%8B%A4"><code>DynamicIPCAST</code>을 사용하기 위해, 서버에 설정된 IP를 인터넷 브라우져에 입력하고 아래의 접속정보를 입력하여 <code>관리자웹에 로그인</code>합니다</h3>
+<ul>
+<li>(1) 사용자 이름을 입력합니다. (기본:<a href="mailto:dipcast@makecall.io">dipcast@makecall.io</a>)</li>
+<li>(2) 비밀번호을 입력합니다. (기본:ihavenopassword@)
+<img src="resources/images/dipcast.desktop.login.png" alt="데스크탑 로그인">
+<br>
+<br></li>
+</ul>
+</blockquote>
+<h1 id="%EB%A7%88-%EB%84%A4%EC%9D%B4%EB%B2%84-%EC%9B%8D%EC%8A%A4-httpsnaverworksmobilecom">마. 네이버 웍스 (<a href="https://naver.worksmobile.com/">https://naver.worksmobile.com/</a>)</h1>
+<blockquote>
+<h3 id="1-%EB%84%A4%EC%9D%B4%EB%B2%84%EC%9B%8D%EC%8A%A4%EB%9E%80">1. 네이버웍스란?</h3>
+<p>네이버웍스는 네이버/LINE 서비스와 유사한 화면으로
+누구나 쉽게 사용할 수 있는 업무용 메신저입니다.
+메시지로 직장 동료들과 소통하며, 네이버웍스만의 그룹 기능으로
+유기적인 협업을 가능하게 합니다.
+타사의 네이버웍스 사용자는 물론 LINE 사용자와도 대화를 나눌 수 있어
+고객 또는 거래처와의 소통 채널을 일원화합니다.</p>
+<ul>
+<li><code>공인 홈 링크</code> <a href="https://naver.worksmobile.com/feature/overview/">https://naver.worksmobile.com/feature/overview/</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<h3 id="2-%EB%84%A4%EC%9D%B4%EB%B2%84%EC%9B%8D%EC%8A%A4-%EA%B0%80%EC%9E%85-%EC%95%88%EB%82%B4">2. 네이버웍스 가입 안내</h3>
+<p>네이버웍스는 회사나 단체에서 가입하여 사용하는 서비스입니다.
+개인이 각각 가입하는 것이 아닌 회사나 단체당 하나의 네이버웍스를 먼저 가입한 후,
+가입한 사람(관리자)이 함께 일하는 직원을 초대하거나 추가해서 구성원을 늘립니다.
+아래의 가입 안내 링크에 따라, 가입하세요.</p>
+<p><img src="resources/images/naver-works-beginner.png" alt="가입 안내"></p>
+<ul>
+<li><code>가입 안내 링크</code> <a href="https://naver.worksmobile.com/ebook/video-for-beginner/">https://naver.worksmobile.com/ebook/video-for-beginner/</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<h3 id="3-naver-works-api-20">3. NAVER WORKS API 2.0</h3>
+<p>NAVER WORKS API는 NAVER WORKS와의 연동 기능을 제공합니다.
+개발자는 NAVER WORKS API를 사용하여 Bot 사용, 조직 및 그룹 관리, 파일 업로드/다운로드 등 NAVER WORKS에서 제공하는 다양한 기능과 리소스를 활용하는 앱을 개발할 수 있습니다.
+NAVER WORKS의 봇, 게시판, 캘린더, 주소록, 메일, 드라이브 등 다양한 기능을 일관적인 인터페이스의 REST API로 활용해보세요.</p>
+<ul>
+<li><code>공인 문서 링크</code> <a href="https://developers.worksmobile.com/kr/features/api">https://developers.worksmobile.com/kr/features/api</a>
+<br>
+<br>
+<br></li>
+</ul>
+</blockquote>
+<blockquote>
+<h3 id="4-naver-works-api-20---bot">4. NAVER WORKS API 2.0 - Bot</h3>
+<p>Bot API로 Bot에서 메시지를 보내거나, 메뉴를 설정하고, Bot을 관리할 수 있다.
+Bot API를 호출하려면 구성원 계정 또는 서비스 계정으로 인증하여 얻은 Access Token이 필요하다. API scope는 bot, bot.read이다.</p>
+<ul>
+<li>
+<p><code>공인 문서 링크</code> <a href="https://developers.worksmobile.com/kr/docs/bot-api">https://developers.worksmobile.com/kr/docs/bot-api</a></p>
+</li>
+<li>
+<p>Bot의 작동 방식
+Bot을 사용하면 NAVER WORKS 사용자와 직접 상호 작용할 수 있다. 고객사의 메시지 수신 서버에서 Bot API를 사용해 사용자에게 메시지를 보낼 수 있으며, 사용자가 전송한 메시지에 따라 자동으로 응답할 수 있다.
+<img src="resources/images/bot_arch.png" alt="봇의 작동방식">
+NAVER WORKS는 Bot의 인터페이스 제공하며 이를 통해 고객사의 메시지 수신 서버와 데이터를 주고 받을수 있다.</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<h3 id="5-naver-works-developer-console-%EC%84%A4%EC%A0%95">5. NAVER WORKS Developer Console 설정</h3>
+<p>NAVER WORKS Developer Console (<a href="https://dev.worksmobile.com/kr/console">https://dev.worksmobile.com/kr/console</a>)에 로그인 후 API 2.0 탭에서 앱을 추가 하고, Bot 탭에서는 Bot을 등록합니다.</p>
+<ul>
+<li>Developer Console 화면</li>
+</ul>
+<p><img src="resources/images/naver-works-console.png" alt="앱"></p>
+<ul>
+<li>
+<p>앱 설정 화면
+<img src="resources/images/naver-works-app.png" alt="앱"></p>
+</li>
+<li>
+<p>봇 설정 화면
+<img src="resources/images/naver-works-bot.png" alt="봇"></p>
+</li>
+</ul>
+</blockquote>
+
+</body>
+</html>
