@@ -45,3 +45,7 @@ CUSTOM 사운드 파일
 |080-dnd-wrong-mobile-number|등록 가능한 번호가 아닙니다. 다시 입력해 주세요 |
 |080-dnd-play-inputnumber-pre | 입력하신  번호는|
 |080-dnd-intro-brand|당신의 더 나은 커뮤니티 여정을 함께 하는 주식회사 얼쑤팩토리|
+|gc-unique-check|현재 동일 이름의 회의가 진행중입니다. 잠시 후에 다시 이용해 주세요 |
+|gc-invite|그룹통화의 참석자로 초대되었습니다 |
+|gc-admin-menu|시작할 그룹통화 번호를 눌러주세요|
+|gc-password-invalid|회의 비밀번호를 확인후 다시 이용해 주세요|
