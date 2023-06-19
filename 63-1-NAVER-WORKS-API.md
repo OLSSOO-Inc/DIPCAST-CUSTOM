@@ -30,8 +30,8 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 나. 제품 설치 환경......3     
 다. 제품 개요 및 설명.....4     
 라. 웹 기본......4     
-마. 네이버 웍스......8     
-바. 부록......55      
+마. 네이버 웍스......5     
+바. 부록......10      
 
 <br>
 <br>
@@ -197,6 +197,23 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 > * 봇 설정 화면     
 > ![봇](resources/images/naver-works-bot.png)
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 > ### 6. 네이버웍스 봇에 수신 메세지 목록
 >
 > * 외부수신     
@@ -210,10 +227,10 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 
 # 바. 부록(같이 사용하면 좋은 모바일 SIP App)
 
-> * 개발사 공홈 <https://acrobits.net/>
+### 개발사 공홈 <https://acrobits.net/>
 
-> - 안드로이드 
+> * 안드로이드 (Google Play 스토어)
 > [링크]<https://play.google.com/store/apps/details?id=cz.acrobits.softphone.alien&hl=ko&gl=US>
 
-> - IOS
+> * IOS (Apple App 스토어)
 > [링크]<https://apps.apple.com/kr/app/acrobits-softphone/id314192799>
