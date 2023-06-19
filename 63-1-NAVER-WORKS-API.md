@@ -197,7 +197,8 @@ Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기
 > * 봇 설정 화면     
 > ![봇](resources/images/naver-works-bot.png)
 
-> - 네이버웍스 봇에 수신 메세지 목록
+> ### 네이버웍스 봇에 수신 메세지 목록
+>
 > * 외부수신     
 > ![봇](resources/images/naver-works-bot-외부수신.png)
 
