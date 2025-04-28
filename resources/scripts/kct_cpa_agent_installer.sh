@@ -33,21 +33,20 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 21.0.7-tem
 sdk default java 21.0.7-tem
-sudo java -version
 
 echo -e "${green}Installing the MariaDB Connector/J ...${txtrst}"
 curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
-sudo apt install libmariadb-java
-sudo find / -name mariadb-java-client.jar
+apt install libmariadb-java
+find / -name mariadb-java-client.jar
 
 echo -e "${green}Installing KCT CPA AGENTS...${txtrst}"
 wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/kct/cpa-agent/SCPA9_0.9.9.7.tar
-sudo tar -xvf SCPA9_0.9.9.7.tar -C /usr/share/kct-cpa-agent/
-sudo mv  /usr/share/kct-cpa-agent/SCPA9_0.9.9.7  /usr/share/kct-cpa-agent/SCPA
+tar -xvf SCPA9_0.9.9.7.tar -C /usr/share/kct-cpa-agent/
+mv  /usr/share/kct-cpa-agent/SCPA9_0.9.9.7  /usr/share/kct-cpa-agent/SCPA
 
 wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/kct/cpa-agent/MCPA9_0.9.9.7.tar
-sudo tar -xvf MCPA9_0.9.9.7.tar -C /usr/share/kct-cpa-agent/
-sudo mv  /usr/share/kct-cpa-agent/MCPA9_0.9.9.7  /usr/share/kct-cpa-agent/MCPA
+tar -xvf MCPA9_0.9.9.7.tar -C /usr/share/kct-cpa-agent/
+mv  /usr/share/kct-cpa-agent/MCPA9_0.9.9.7  /usr/share/kct-cpa-agent/MCPA
 
 echo -e "${green}Configuring KCT CPA AGENT...${txtrst}"
 filename="kct-cpa-config.txt"
@@ -162,18 +161,18 @@ CPA_HOME = ./
 CPA_LOGDIR = ./LOG
 CPA_LOGLEVEL = 3
 CPA_RECV_PERIOD = 10
-SERVER_IP = 112.140.151.41	
-SERVER_PORT = 51100
-SERVER_ID = olssoo
-SERVER_PASSWD = olssoo^1
+SERVER_IP = $serverip	
+SERVER_PORT = $serverport
+SERVER_ID = $cpaid
+SERVER_PASSWD = $cpapassword
 SMS_TIMEOUT = 5
 LINECHK_TIMEOUT = 60
 DB_TYPE	= MYSQL
 DB_FLAG = 1
-DB_IP = 127.0.0.1
+DB_IP = $cpadbserverip
 DB_PORT = 3306
-DB_USERNAME = dipcast
-DB_PASSWD = dipcast5k1!
+DB_USERNAME = $cpadbserverid
+DB_PASSWD = $cpadbpassword
 DB_NAME	= nimpdb
 DB_CHARSET = UTF8
 DB_TABLE = kct_sms_rcv
@@ -196,19 +195,19 @@ CPA_DISKFREESPACE_LIMITRATIO = 20
 CPA_CONT_ONOFF = 0
 CPA_LOGLEVEL = 3
 CPA_RECV_PERIOD = 10
-SERVER_IP = 112.140.151.41	
-SERVER_PORT = 51101	
-SERVER_ID = olssoo
-SERVER_PASSWD = olssoo^1
+SERVER_IP = $serverip	
+SERVER_PORT = $serverport	
+SERVER_ID = $cpaid
+SERVER_PASSWD = $cpapassword
 LINECHK_TIMEOUT = 10
 DB_TYPE	= MYSQL
-DB_USERNAME = dipcast	
-DB_PASSWD = dipcast5k1!
+DB_USERNAME = $cpadbserverid	
+DB_PASSWD = $cpadbpassword
 DB_CHARSET = UTF8
 DB_TABLE = kct_mms_rcv
 DB_CONN_CHECK = 10
 DB_FLAG = 1
-DB_IP = 127.0.0.1
+DB_IP = $cpadbserverip
 DB_PORT = 3306
 DB_NAME	= nimpdb
 

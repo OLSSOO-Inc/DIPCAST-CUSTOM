@@ -33,18 +33,17 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 21.0.7-tem
 sdk default java 21.0.7-tem
-sudo java -version
 
 echo -e "${green}Installing the MariaDB Connector/J ...${txtrst}"
 curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
-sudo apt install libmariadb-java
-sudo find / -name mariadb-java-client.jar
+apt install libmariadb-java
+find / -name mariadb-java-client.jar
 
 echo -e "${green}Installing KCT NIMP AGENT...${txtrst}"
 wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/kct/nimp-agent/KCT_Agent_ver2.0a.zip
-sudo unzip KCT_Agent_ver2.0a.zip -d  /usr/share/
-sudo mv  /usr/share/KCT_Agent_ver2.0a /usr/share/kct-nimp-agent
-sudo chmod +x  /usr/share/kct-nimp-agent/agent.sh
+unzip KCT_Agent_ver2.0a.zip -d  /usr/share/
+mv  /usr/share/KCT_Agent_ver2.0a /usr/share/kct-nimp-agent
+chmod +x  /usr/share/kct-nimp-agent/agent.sh
 
 echo -e "${green}Configuring KCT NIMP AGENT...${txtrst}"
 filename="kct-nimp-config.txt"
@@ -206,7 +205,7 @@ dbtype=maria
 driver=org.mariadb.jdbc.Driver
 url=jdbc:mariadb://$nimpdbserverip:3306/nimpdb?characterEncoding=utf8
 username=$nimpdbserverid
-password=nimpdbpassword
+password=$nimpdbpassword
 EOF
 
 echo -e "****************************************************"
@@ -235,5 +234,5 @@ WantedBy=multi-user.target
 EOF
 
 echo -e "${green}Starting & Enabling KCT-Nimp-Agent Services...${txtrst}"
-sudo systemctl enable kct-nimp-agent
-sudo systemctl start kct-nimp-agent
+systemctl enable kct-nimp-agent
+systemctl start kct-nimp-agent
