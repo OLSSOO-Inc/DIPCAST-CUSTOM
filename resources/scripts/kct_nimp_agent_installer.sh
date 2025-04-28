@@ -29,8 +29,8 @@ mysql -u root -e "CREATE DATABASE nimpdb;"
 rm -rf KCT_Agent_ver* /usr/share/kct-nimp-agent /etc/apt/sources.list.d/mariadb.list
 
 echo -e "${green}Updating the System...${txtrst}"
-sudo apt update
-sudo apt install curl zip unzip -y
+apt update
+apt install curl zip unzip -y
 
 echo -e "${green}Installing the JAVA From SDKMAN...${txtrst}"
 curl -s "https://get.sdkman.io" | bash

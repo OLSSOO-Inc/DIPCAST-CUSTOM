@@ -25,8 +25,8 @@ echo -e "*     Powered by OLSSOO FACTORY, 1668-2471      *"
 echo -e "*************************************************"
 
 echo -e "${green}Updating the System...${txtrst}"
-sudo apt update
-sudo apt install curl zip unzip -y
+apt update
+apt install curl zip unzip -y
 rm -rf KCT_Agent_ver* /usr/share/kct-nimp-agent /etc/apt/sources.list.d/mariadb.list
 
 echo -e "${green}Installing the JAVA From SDKMAN...${txtrst}"
