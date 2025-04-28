@@ -152,7 +152,7 @@ else
 		exit;
 fi
 
-cat > /usr/share/kct-cpa-agent/SCAP/CPA_SMS.conf << EOF
+cat > /usr/share/kct-cpa-agent/SCPA/CPA_SMS.conf << EOF
 #######################################################################
 #
 # SMS CPA º≥¡§∆ƒ¿œ
@@ -183,7 +183,7 @@ DB_CONN_CHECK = 10
 
 EOF
 
-cat > /usr/share/kct-cpa-agent/MCAP/CPA_MMS.conf << EOF
+cat > /usr/share/kct-cpa-agent/MCPA/CPA_MMS.conf << EOF
 #######################################################################
 #
 # MMS CPA º≥¡§∆ƒ¿œ
@@ -199,7 +199,7 @@ CPA_CONT_ONOFF = 0
 CPA_LOGLEVEL = 3
 CPA_RECV_PERIOD = 10
 SERVER_IP = $serverip	
-SERVER_PORT = $(serverport + 1)	
+SERVER_PORT = $(expr $serverport + 1)
 SERVER_ID = $cpaid
 SERVER_PASSWD = $cpapassword
 LINECHK_TIMEOUT = 10
@@ -242,8 +242,8 @@ WantedBy=multi-user.target
 EOF
 
 echo -e "${green}Starting & Enabling KCT-SCPA-Agent Services...${txtrst}"
-sudo systemctl enable kct-scpa-agent
-sudo systemctl start kct-scpa-agent
+systemctl enable kct-scpa-agent
+systemctl start kct-scpa-agent
 
 
 echo -e "${green}Configuring KCT-MCPA-Agent...${txtrst}"
@@ -267,5 +267,5 @@ WantedBy=multi-user.target
 EOF
 
 echo -e "${green}Starting & Enabling KCT-MCPA-Agent Services...${txtrst}"
-sudo systemctl enable kct-mcpa-agent
-sudo systemctl start kct-mcpa-agent
+systemctl enable kct-mcpa-agent
+systemctl start kct-mcpa-agent
