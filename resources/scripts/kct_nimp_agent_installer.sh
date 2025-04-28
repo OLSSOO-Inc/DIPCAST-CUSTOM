@@ -26,6 +26,7 @@ echo -e "*************************************************"
 
 echo -e "${green}Creating Database nimpdb...${txtrst}"
 mysql -u root -e "CREATE DATABASE nimpdb;"
+rm -rf KCT_Agent_ver* /usr/share/kct-nimp-agent /etc/apt/sources.list.d/mariadb.list
 
 echo -e "${green}Updating the System...${txtrst}"
 sudo apt update
@@ -43,7 +44,6 @@ apt install libmariadb-java
 find / -name mariadb-java-client.jar
 
 echo -e "${green}Installing KCT NIMP AGENT...${txtrst}"
-rm -rf KCT_Agent_ver* /usr/share/kct-nimp-agent
 wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/kct/nimp-agent/KCT_Agent_ver2.0a.zip
 unzip KCT_Agent_ver2.0a.zip -d  /usr/share/
 mv  /usr/share/KCT_Agent_ver2.0a /usr/share/kct-nimp-agent
