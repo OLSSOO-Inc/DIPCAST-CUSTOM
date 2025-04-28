@@ -40,7 +40,7 @@ curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 apt install libmariadb-java
 find / -name mariadb-java-client.jar
 
-rm -rf SCPA* MCPA* /usr/share/cpa-agent
+mkdir -p /usr/share/kct-cpa-agent
 
 echo -e "${green}Installing KCT CPA AGENTS...${txtrst}"
 wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/kct/cpa-agent/SCPA9_0.9.9.7.tar
