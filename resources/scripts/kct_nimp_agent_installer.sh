@@ -24,6 +24,9 @@ echo -e "*  Welcome to the KCT NIMP Agent Installation   *"
 echo -e "*     Powered by OLSSOO FACTORY, 1668-2471      *"
 echo -e "*************************************************"
 
+echo -e "${green}Creating Database nimpdb...${txtrst}"
+mysql -u root -e "CREATE DATABASE nimpdb;"
+
 echo -e "${green}Updating the System...${txtrst}"
 sudo apt update
 sudo apt install curl zip unzip -y
@@ -40,6 +43,7 @@ apt install libmariadb-java
 find / -name mariadb-java-client.jar
 
 echo -e "${green}Installing KCT NIMP AGENT...${txtrst}"
+rm -rf KCT_Agent_ver* /usr/share/kct-nimp-agent
 wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/kct/nimp-agent/KCT_Agent_ver2.0a.zip
 unzip KCT_Agent_ver2.0a.zip -d  /usr/share/
 mv  /usr/share/KCT_Agent_ver2.0a /usr/share/kct-nimp-agent
