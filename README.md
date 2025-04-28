@@ -12,8 +12,10 @@ How to develop your own custom scripts on DIPCAST!
 ## 02.080 문자메세지 수신 거부 제공
 > * [080 문자메세지 수신 거부 등록시스템](62-1-080DND.md)
 
-## 03.Naver Works API 연동 (63-1-NAVER-WORKS-API.md)
-> * [Naver Works API 연동을 통해, 모바일 UC 환경 직접 구축하기](63-1-NAVER-WORKS-API.md)
+## 03.KCT 통합 메시징 설치
+> * [KCT 통합 메시징 구축하기](KCT-통합메시징.md)
+
+
 
 ## DIPCAST 구매후 시작하세요 !
 
