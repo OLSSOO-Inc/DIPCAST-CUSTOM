@@ -176,7 +176,7 @@ DB_IP = $cpadbserverip
 DB_PORT = 3306
 DB_USERNAME = $cpadbserverid
 DB_PASSWD = $cpadbpassword
-DB_NAME	= nimpdb
+DB_NAME	= dcrm
 DB_CHARSET = UTF8
 DB_TABLE = kct_sms_rcv
 DB_CONN_CHECK = 10
@@ -212,7 +212,7 @@ DB_CONN_CHECK = 10
 DB_FLAG = 1
 DB_IP = $cpadbserverip
 DB_PORT = 3306
-DB_NAME	= nimpdb
+DB_NAME	= dcrm
 
 EOF
 
@@ -234,7 +234,7 @@ WorkingDirectory=/usr/share/kct-cpa-agent/SCPA/
 ExecStart=/root/.sdkman/candidates/java/current/bin/java -Xms32m -Xmx64m -XX:+UseG1GC -XX:MetaspaceSize=32M -XX:MaxMetaspaceSize=64M -Djdk.nio.maxCachedBufferSize=10485760 -jar ./SCPA.jar ./CPA_SMS.conf
 SuccessExitStatus=143                    # SIGTERM(기본 중지 신호)으로 종료 시 성공으로 간주
 TimeoutStopSec=5                        # 중지 시 대기 시간 (초)
-Restart=on-failure
+Restart=always
 User=root
 
 [Install]
@@ -259,7 +259,7 @@ WorkingDirectory=/usr/share/kct-cpa-agent/MCPA/
 ExecStart=/root/.sdkman/candidates/java/current/bin/java -Xms32m -Xmx64m -XX:+UseG1GC -XX:MetaspaceSize=32M -XX:MaxMetaspaceSize=64M -Djdk.nio.maxCachedBufferSize=10485760 -jar ./MCPA.jar ./CPA_MMS.conf
 SuccessExitStatus=143                    # SIGTERM(기본 중지 신호)으로 종료 시 성공으로 간주
 TimeoutStopSec=5                        # 중지 시 대기 시간 (초)
-Restart=on-failure
+Restart=always
 User=root
 
 [Install]

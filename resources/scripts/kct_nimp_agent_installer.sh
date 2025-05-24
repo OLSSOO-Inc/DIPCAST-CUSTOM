@@ -198,7 +198,7 @@ cat > /usr/share/kct-nimp-agent/config/common.xml << EOF
 	<entry key="blPort">0</entry>
 
 	<entry key="dbPwEncryption">N</entry>
-	<entry key="dbTableMove">Y</entry>
+	<entry key="dbTableMove">N</entry>
 
 </properties>
 
@@ -230,7 +230,7 @@ WorkingDirectory=/usr/share/kct-nimp-agent/
 ExecStart=/root/.sdkman/candidates/java/current/bin/java -jar amagent_20a.jar NIMP_AGENT_20a
 SuccessExitStatus=143                    # SIGTERM(기본 중지 신호)으로 종료 시 성공으로 간주
 TimeoutStopSec=5                        # 중지시 대기 시간 (초)
-Restart=on-failure
+Restart=always
 User=root
 
 [Install]
