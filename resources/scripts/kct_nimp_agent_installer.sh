@@ -24,8 +24,8 @@ echo -e "*  Welcome to the KCT NIMP Agent Installation   *"
 echo -e "*     Powered by OLSSOO FACTORY, 1668-2471      *"
 echo -e "*************************************************"
 
-echo -e "${green}Creating Database nimpdb...${txtrst}"
-mysql -u root -e "CREATE DATABASE nimpdb;"
+echo -e "${green}Checking Database dcrm...${txtrst}"
+mysql -u root -e "show database dcrm;"
 rm -rf KCT_Agent_ver* /usr/share/kct-nimp-agent /etc/apt/sources.list.d/mariadb.list
 
 echo -e "${green}Updating the System...${txtrst}"
@@ -80,8 +80,8 @@ if [ -f $filename ]; then
 		esac
 		n=$((n+1))
 	done < $filename
-	echo -e "Server IP............... > $serverip"	
-	echo -e "Server Port...............> $serverport"
+	echo -e "KCT Server IP............... > $serverip"	
+	echo -e "KCT Server Port...............> $serverport"
 	echo -e "KCT NIMP ID.............. > $nimpid"
 	echo -e "KCT NIMP PASSWORD........ > $nimppassword"
 	echo -e "DB Server IP............. > $nimpdbserverip"
@@ -207,7 +207,7 @@ EOF
 cat > /usr/share/kct-nimp-agent/config/db.properties << EOF
 dbtype=maria
 driver=org.mariadb.jdbc.Driver
-url=jdbc:mariadb://$nimpdbserverip:3306/nimpdb?characterEncoding=utf8
+url=jdbc:mariadb://$nimpdbserverip:3306/dcrm?characterEncoding=utf8
 username=$nimpdbserverid
 password=$nimpdbpassword
 EOF
