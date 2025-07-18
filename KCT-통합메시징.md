@@ -17,3 +17,10 @@ KCT 통합 메시징 설치
 > chmod +x kct_cpa_agent_installer.sh
 > ./kct_cpa_agent_installer.sh
 > ```
+
+### CPA (MCPA, SCPA) DB 생성
+> ```
+> rm -rf kct-cpa-init.sql
+> wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/resources/config/kct-cpa-init.sql
+> mysql -udcrm -pdcrm5K1! dcrm < kct-cpa-init.sql
+> ```
