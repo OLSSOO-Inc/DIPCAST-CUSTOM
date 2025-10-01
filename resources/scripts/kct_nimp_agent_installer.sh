@@ -45,6 +45,7 @@ find / -name mariadb-java-client.jar
 
 echo -e "${green}Installing KCT NIMP AGENT...${txtrst}"
 wget --inet4-only https://raw.githubusercontent.com/OLSSOO-Inc/DIPCAST-CUSTOM/master/kct/nimp-agent/KCT_Agent_ver2.0a.zip
+mkdir -p /usr/share/kct-nimp-agent
 unzip KCT_Agent_ver2.0a.zip -d  /usr/share/
 mv  /usr/share/KCT_Agent_ver2.0a /usr/share/kct-nimp-agent
 chmod +x  /usr/share/kct-nimp-agent/agent.sh
