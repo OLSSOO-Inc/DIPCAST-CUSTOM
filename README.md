@@ -12,7 +12,7 @@ How to develop your own custom scripts on DIPCAST!
 ## 02.080 문자메세지 수신 거부 제공
 > * [080 문자메세지 수신 거부 등록시스템](62-1-080DND.md)
 
-## 03.KCT 통합 메시징 설치
+## 03.KCT 통합 메시징 설치 (CPA v1.1.2, Agent v.2.2b)
 > * [KCT 통합 메시징 구축하기](KCT-통합메시징.md)
 
 
