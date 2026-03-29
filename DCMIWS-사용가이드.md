@@ -1,6 +1,7 @@
 # 🚀 DIPCAST DCMIWS API 문서 
 
-> **Version 1.0** | 최종 업데이트: 2025년 10월  
+> **Version 1.0** | 생성일 : 2025년 10월 1일
+> **Version 1.1** | 업데이트: 2026년 3월 29일
 > DIPCAST DCMIWS API 완벽 가이드 - 착신전환 및 클릭투콜 관리
 
 ---
@@ -199,15 +200,15 @@
 
 #### 📤 요청 (Read Request)
 
-**시나리오:** 테넌트 `7be69580e27641df`의 `1010` 단말번호 착신전환 상태 확인
+**시나리오:** 테넌트 `7be69580e27641df`의 `45805605` 단말번호 착신전환 상태 확인
 
 ```json
 {
    "AMIServerID": 1,
    "data": {
       "Action": "Command",
-      "Command": "database get 7be69580e27641df diversions/1010/CFI/enable",
-      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-CFI-Custom"
+      "Command": "database get 7be69580e27641df diversions/45805605/CFI/enable",
+      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-CFI-Custom"
    }
 }
 ```
@@ -224,7 +225,7 @@
     "ssl": false,
     "data": {
         "Response": "Success",
-        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-CFI-Custom",
+        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-CFI-Custom",
         "Message": "Command output follows",
         "Output": "Value: no"
     }
@@ -245,7 +246,7 @@
     "ssl": false,
     "data": {
         "Response": "Success",
-        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-CFI-Custom",
+        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-CFI-Custom",
         "Message": "Command output follows",
         "Output": "Value: yes"
     }
@@ -260,15 +261,15 @@
 
 #### 📤 요청 (Update Request)
 
-**시나리오:** 테넌트 `7be69580e27641df`의 `1010` 단말번호 착신전환 켜기
+**시나리오:** 테넌트 `7be69580e27641df`의 `45805605` 단말번호 착신전환 켜기
 
 ```json
 {
    "AMIServerID": 1,
    "data": {
       "Action": "Command",
-      "Command": "database put 7be69580e27641df diversions/1010/CFI/enable yes",
-      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-CFI-yes-Custom"
+      "Command": "database put 7be69580e27641df diversions/45805605/CFI/enable yes",
+      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-CFI-yes-Custom"
    }
 }
 ```
@@ -283,7 +284,7 @@
     "ssl": false,
     "data": {
         "Response": "Success",
-        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-CFI-yes-Custom",
+        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-CFI-yes-Custom",
         "Message": "Command output follows",
         "Output": "Updated database successfully"
     }
@@ -298,15 +299,15 @@
 
 #### 📤 요청 (Update Request)
 
-**시나리오:** 테넌트 `7be69580e27641df`의 `1010` 단말번호 착신전환 끄기
+**시나리오:** 테넌트 `7be69580e27641df`의 `45805605` 단말번호 착신전환 끄기
 
 ```json
 {
    "AMIServerID": 1,
    "data": {
       "Action": "Command",
-      "Command": "database put 7be69580e27641df diversions/1010/CFI/enable no",
-      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-CFI-no-Custom"
+      "Command": "database put 7be69580e27641df diversions/45805605/CFI/enable no",
+      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-CFI-no-Custom"
    }
 }
 ```
@@ -321,7 +322,7 @@
     "ssl": false,
     "data": {
         "Response": "Success",
-        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-CFI-no-Custom",
+        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-CFI-no-Custom",
         "Message": "Command output follows",
         "Output": "Updated database successfully"
     }
@@ -344,15 +345,15 @@
 
 #### 📤 요청 (Read Request)
 
-**시나리오:** 테넌트 `7be69580e27641df`의 `1010` 단말번호의 착신번호 확인
+**시나리오:** 테넌트 `7be69580e27641df`의 `45805605` 단말번호의 착신번호 확인
 
 ```json
 {
    "AMIServerID": 1,
    "data": {
       "Action": "Command",
-      "Command": "database get 7be69580e27641df diversions/1010/CFI/destination",
-      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-착신번호조회-Custom"
+      "Command": "database get 7be69580e27641df diversions/45805605/CFI/destination",
+      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-착신번호조회-Custom"
    }
 }
 ```
@@ -369,7 +370,7 @@
     "ssl": false,
     "data": {
         "Response": "Success",
-        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-착신번호조회-Custom",
+        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-착신번호조회-Custom",
         "Message": "Command output follows",
         "Output": "Value: sub-custom-numbers,01099552471,1"
     }
@@ -391,8 +392,8 @@
    "AMIServerID": 1,
    "data": {
       "Action": "Command",
-      "Command": "database put 7be69580e27641df diversions/1010/CFI/destination sub-custom-numbers,01026132471,1",
-      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-착신번호변경-01026132471-Custom"
+      "Command": "database put 7be69580e27641df diversions/45805605/CFI/destination sub-custom-numbers,01026132471,1",
+      "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-착신번호변경-01026132471-Custom"
    }
 }
 ```
@@ -409,7 +410,7 @@
     "ssl": false,
     "data": {
         "Response": "Success",
-        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-1010-착신번호변경-01026132471-Custom",
+        "ActionID": "DIPCAST-ServerID_1-7be69580e27641df-45805605-착신번호변경-01026132471-Custom",
         "Message": "Command output follows",
         "Output": "Updated database successfully"
     }
@@ -451,7 +452,7 @@ POST https://{{host}}/api/v2/core/click_to_call
 
 ```json
 {
-    "caller": "1010",
+    "caller": "45805605",
     "callee": "16682471",
     "cos_id": "2",
     "cid_name": "얼쑤팩토리",
@@ -468,7 +469,7 @@ POST https://{{host}}/api/v2/core/click_to_call
 
 | 필드 | 설명 | 예시 |
 |:-----|:-----|:-----|
-| `caller` | 발신 단말번호 | `1010` |
+| `caller` | 발신 단말번호 | `45805605` |
 | `callee` | 수신 전화번호 | `16682471` |
 | `cos_id` | COS ID (Class of Service) | `2` |
 | `cid_name` | 발신자 표시 이름 | `얼쑤팩토리` |
@@ -485,7 +486,7 @@ POST https://{{host}}/api/v2/core/click_to_call
 
 | 파라미터 | 설명 | 예시 |
 |:--------|:-----|:-----|
-| `{단말번호}` | 착신전환이 설정된 단말번호 | `1010`, `1013` |
+| `{단말번호}` | 착신전환이 설정된 단말번호 | `45805605`, `1013` |
 | `{발신번호}` | 발신하고자 하는 전화번호 | `07045144801`, `01026132471` |
 | `{070번호}` | CDR에서 통화구분을 위한 전화번호 | `07045805605` |
 | `{발신자이름}` | 본인과 상대방에 표시될 이름 | `얼쑤팩토리`, `지화자` |
@@ -522,7 +523,7 @@ POST https://{{host}}/api/v2/core/click_to_call
 #### 📞 예시 1: 얼쑤팩토리 → 07045144801
 
 **통화 시나리오:**
-- 발신자: `1010` (착신번호: `01026132471`)
+- 발신자: `45805605` (착신번호: `01026132471`)
 - 수신자: `07045144801`
 - 계정번호: `07045805605`
 
@@ -531,7 +532,7 @@ POST https://{{host}}/api/v2/core/click_to_call
    "AMIServerID": 1,
    "data": {
       "Action": "Originate",
-      "Channel": "Local/1010@T2_cos-all",
+      "Channel": "Local/45805605@T2_cos-all",
       "Context": "T2_cos-all",
       "Exten": "07045144801",
       "Priority": "1",
@@ -548,7 +549,7 @@ POST https://{{host}}/api/v2/core/click_to_call
 ```
 
 **📊 통화 흐름:**
-1. 단말 `1010`이 먼저 호출됨
+1. 단말 `45805605`이 먼저 호출됨
 2. 착신전환 설정에 따라 `01026132471`로 연결됨
 3. 응답 후 자동으로 `07045144801`과 연결됨
 
@@ -677,8 +678,8 @@ database put {TenantID} {Key} {Value}
 
 ## 📄 문서 정보
 
-- **작성일:** 2025년 10월
-- **버전:** 1.0
+- **작성일:** 2026년 3월 29일
+- **버전:** 1.1
 - **대상:** DIPCAST DCMIWS API 개발자 및 관리자
 - **라이선스:** 내부 사용 전용
 
